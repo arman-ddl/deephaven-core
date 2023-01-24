@@ -16,6 +16,7 @@ import io.deephaven.server.plugin.python.PythonPluginsRegistration;
 import io.deephaven.server.runner.DeephavenApiConfigModule;
 import io.deephaven.server.runner.DeephavenApiServerComponent;
 import io.deephaven.server.runner.DeephavenApiServerModule;
+import io.deephaven.server.table.InternalMetricsModule;
 
 import javax.inject.Singleton;
 
@@ -32,6 +33,7 @@ import javax.inject.Singleton;
         PythonConsoleSessionModule.class,
         GroovyConsoleSessionModule.class,
         SessionToExecutionStateModule.class,
+        InternalMetricsModule.class
 })
 public interface JettyServerComponent extends DeephavenApiServerComponent {
     @Component.Builder
